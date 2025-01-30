@@ -11,7 +11,6 @@ body {
 /* Estilos para el navbar */
 .navbar {
   display: grid;
-  grid-template-columns: 1fr auto auto;
   align-items: center;
   padding: 30px;
   font-size: 1.2rem;
@@ -62,7 +61,7 @@ body {
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
   .navbar {
-      grid-template-columns: 1fr auto;
+      justify-content: right;
   }
 
   .nav-links {
