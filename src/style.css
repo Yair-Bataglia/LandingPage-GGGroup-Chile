@@ -128,7 +128,7 @@ body {
 
 /********************************* PAGES STYLES *************************************/
 
-/* INICIO */
+/***********    INICIO    **********/
 #inicio {
   display: grid;
 }
@@ -153,4 +153,30 @@ body {
 
 #inicio img{
   width: 300px;
+}
+
+#inicio #presentacion h1 {
+  font-size: 4rem;
+  color: #2b2e83;
+  position: relative; /* Necesario para la posición de los elementos dentro */
+}
+
+#inicio #presentacion  h1 span {
+  display: inline-block; /* Para que se trate como un bloque y se mueva independientemente */
+}
+
+#inicio #presentacion .chile {
+  color: #d30f32;
+  font-size: 1.5rem;
+  position: absolute; /* Permite mover el texto respecto al h1 */
+  left: 50%; /* Ajusta el valor para mover "Chile" sobre la "U" */
+  top: 57px; /* Ajusta la distancia vertical desde la parte superior del h1 */
+}
+
+#inicio #presentacion  .comp {
+  color: #a2a0a0;
+  position: absolute;
+  left: 10%; /* Esto pone "Compañia de cobranzas" en una nueva línea debajo del h1 */ /* Espacio entre el h1 y el texto */
+  top: 120%;
+  font-size: 1.2rem; /* Ajusta el tamaño del texto */
 }
