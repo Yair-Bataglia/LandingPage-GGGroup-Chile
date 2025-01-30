@@ -10,14 +10,15 @@ body {
 
 /* Estilos para el navbar */
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
   align-items: center;
-  padding: 30px 30px;
+  padding: 30px;
   font-size: 1.2rem;
   background-color: #333;
   color: white;
 }
+
 .logo {
   display: flex;
   align-items: center; 
@@ -27,25 +28,27 @@ body {
 .logo img {
   width: 100px;
   height: auto;
-  
 }
 
-.navbar .nav-links ul {
+.nav-links {
+  display: grid;
+  justify-content: center;
+}
+
+.nav-links ul {
   list-style: none;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 50px;
 }
 
-.navbar .nav-links ul li {
-  margin-left: 50px;
-}
-
-.navbar .nav-links ul li a {
+.nav-links ul li a {
   text-decoration: none;
   color: white;
   font-weight: 500;
 }
 
-.navbar .nav-links ul li a:hover {
+.nav-links ul li a:hover {
   color: #f0a500;
 }
 
@@ -58,22 +61,24 @@ body {
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
-  .navbar .nav-links {
+  .navbar {
+      grid-template-columns: 1fr auto;
+  }
+
+  .nav-links {
       display: none;
       width: 100%;
       background-color: #333;
       position: absolute;
       top: 60px;
       left: 0;
-  }
-
-  .navbar .nav-links ul {
-      display: block;
       text-align: center;
   }
 
-  .navbar .nav-links ul li {
-      margin: 15px 0;
+  .nav-links ul {
+      display: grid;
+      grid-auto-flow: row;
+      gap: 15px;
   }
 
   .menu-icon {
