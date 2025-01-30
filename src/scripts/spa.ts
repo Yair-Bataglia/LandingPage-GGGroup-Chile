@@ -1,6 +1,6 @@
 export function loadPage(page: string): void {
     // Construir la ruta del archivo HTML según la página solicitada
-    const filePath = `../pages/${page}.html`;
+    const filePath = `./pages/${page}.html`;
 
     // Realizar la solicitud para cargar el archivo HTML
     fetch(filePath)
@@ -17,11 +17,9 @@ export function loadPage(page: string): void {
 
             // Extraer solo el contenido que deseas, por ejemplo, lo que está dentro de un div con id 'page-content'
             const pageContent = tempElement.querySelector('#page-content');
-            console.log(html)
             
             // Obtener el contenedor donde se insertará el contenido
             const contentDiv = document.getElementById('content');
-            console.log(contentDiv)
             if (contentDiv && pageContent) {
                 contentDiv.innerHTML = pageContent.innerHTML; // Insertar solo el contenido específico
             }

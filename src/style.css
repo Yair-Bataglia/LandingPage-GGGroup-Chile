@@ -88,3 +88,22 @@ body {
       display: block;
   }
 }
+
+/********************************* PAGES STYLES *************************************/
+
+/* INICIO */
+#inicio {
+  display: grid;
+}
+
+#inicio #presentacion {
+  display: grid; /* Define que se va a usar grid */
+  grid-template-columns: auto auto auto; /* Crea tres columnas de tamaño automático */
+  gap: 20px; /* Espacio entre los elementos */
+  align-items: center; /* Centra los elementos verticalmente */
+  padding: 60px 100px;
+}
+
+#inicio img{
+  width: 300px;
+}
