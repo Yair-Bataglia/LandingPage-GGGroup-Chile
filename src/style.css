@@ -14,7 +14,7 @@ body {
   align-items: center;
   padding: 30px;
   font-size: 1.2rem;
-  background-color: #333;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(136,0,0,1) 15%, rgba(209,6,6,1) 50%, rgba(136,0,0,1) 85%, rgb(0, 0, 0) 100%);
   color: white;
 }
 
@@ -145,8 +145,8 @@ body {
   background-color: rgba(0, 0, 0, 0.829);
   
   display: grid; /* Define que se va a usar grid */
-  grid-template-columns: auto auto auto ; /* Crea tres columnas de tamaño automático */
-  gap: 20px; /* Espacio entre los elementos */
+  grid-template-columns: max-content max-content auto ; /* Crea tres columnas de tamaño automático */
+  gap: 0px; /* Espacio entre los elementos */
   align-items: center; /* Centra los elementos verticalmente */
   padding: 60px 100px;
 }
@@ -179,4 +179,9 @@ body {
   left: 10%; /* Esto pone "Compañia de cobranzas" en una nueva línea debajo del h1 */ /* Espacio entre el h1 y el texto */
   top: 120%;
   font-size: 1.2rem; /* Ajusta el tamaño del texto */
+}
+
+#inicio #presentacion  button {
+  justify-self: end;
+  width: 200px;
 }
