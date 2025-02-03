@@ -12,9 +12,10 @@ body {
 .navbar {
   display: grid;
   align-items: center;
-  padding: 30px;
-  font-size: 1.2rem;
-  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(136,0,0,1) 15%, rgba(209,6,6,1) 50%, rgba(136,0,0,1) 85%, rgb(0, 0, 0) 100%);
+  padding: 10px;
+  height: 60px;
+  font-size: 1rem;
+  background: linear-gradient(90deg, rgb(106, 5, 5) 0%, rgb(185, 7, 7) 15%, rgb(210, 14, 14) 50%, rgba(185, 7, 7) 85%, rgb(106, 5, 5) 100%);
   color: white;
 }
 
@@ -38,13 +39,13 @@ body {
   list-style: none;
   display: grid;
   grid-auto-flow: column;
-  gap: 50px;
+  gap: 70px;
 }
 
 .nav-links ul li a {
   text-decoration: none;
-  color: white;
-  font-weight: 500;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
 }
 
 .nav-links ul li a:hover {
@@ -129,6 +130,14 @@ body {
 /********************************* PAGES STYLES *************************************/
 
 /***********    INICIO    **********/
+@media (max-width: 768px) {
+  #inicio section {
+      min-height: 100vh; /* Asegura que la imagen de fondo cubra toda la pantalla */
+      background-size: contain; /* Evita cortes */
+  }
+}
+
+
 #inicio {
   display: grid;
 }
@@ -142,23 +151,28 @@ body {
 }
 
 #inicio #presentacion {
-  background-color: rgba(0, 0, 0, 0.829);
+  background-color: rgba(0, 0, 0, 0.797);
   
   display: grid; /* Define que se va a usar grid */
   grid-template-columns: max-content max-content auto ; /* Crea tres columnas de tamaño automático */
   gap: 0px; /* Espacio entre los elementos */
   align-items: center; /* Centra los elementos verticalmente */
-  padding: 60px 100px;
+  padding: 2% 12%;
 }
 
 #inicio img{
   width: 300px;
+  margin-right: 20px;
 }
 
 #inicio #presentacion h1 {
   font-size: 4rem;
-  color: #2b2e83;
+  color: #ffffff;
   position: relative; /* Necesario para la posición de los elementos dentro */
+}
+
+#presentacion  h1 .gg {
+  color: #3cab37;
 }
 
 #inicio #presentacion  h1 span {
@@ -169,7 +183,7 @@ body {
   color: #d30f32;
   font-size: 1.5rem;
   position: absolute; /* Permite mover el texto respecto al h1 */
-  left: 50%; /* Ajusta el valor para mover "Chile" sobre la "U" */
+  left: 60%; /* Ajusta el valor para mover "Chile" sobre la "U" */
   top: 57px; /* Ajusta la distancia vertical desde la parte superior del h1 */
 }
 
@@ -184,4 +198,8 @@ body {
 #inicio #presentacion  button {
   justify-self: end;
   width: 200px;
+  height: 50px;
+
+  font-size: 1rem;
+  font-weight: 500;
 }
