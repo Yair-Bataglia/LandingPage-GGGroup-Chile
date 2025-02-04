@@ -15,7 +15,7 @@ body {
   padding: 10px;
   height: 60px;
   font-size: 1rem;
-  background: linear-gradient(90deg, rgb(106, 5, 5) 0%, rgb(185, 7, 7) 15%, rgb(210, 14, 14) 50%, rgba(185, 7, 7) 85%, rgb(106, 5, 5) 100%);
+  background: linear-gradient(90deg, rgb(13, 5, 106) 0%, rgb(13, 7, 185) 15%, rgb(14, 54, 210) 50%, rgb(7, 10, 185) 85%, rgb(8, 5, 106) 100%);
   color: white;
 }
 
@@ -30,16 +30,15 @@ body {
   height: auto;
 }
 
-.nav-links {
-  display: grid;
-  justify-content: center;
-}
 
 .nav-links ul {
   list-style: none;
   display: grid;
+  grid-template-columns: max-content max-content max-content max-content max-content max-content max-content ;
   grid-auto-flow: column;
-  gap: 70px;
+  gap: 5%;
+  justify-content: center;
+  align-items:center;
 }
 
 .nav-links ul li a {
@@ -51,6 +50,18 @@ body {
 .nav-links ul li a:hover {
   color: #f0a500;
 }
+
+.ignorar {
+  display: flex; /* Habilita flexbox */
+  justify-content: center; /* Centra horizontalmente la imagen */
+  align-items: center; /* Centra verticalmente la imagen */
+  padding: 0; /* Elimina cualquier padding adicional */
+}
+
+.ignorar img{
+  max-width: 20%;
+  height: auto;
+ }
 
 /* Estilos para el icono de menú en pantallas pequeñas */
 .menu-icon {
@@ -138,9 +149,9 @@ body {
 }
 
 
-#inicio {
-  display: grid;
-}
+/* #inicio {
+
+} */
 
 #inicio section {
   background-image: url('./assets/images/estadisticas-not.jpg');
@@ -151,13 +162,16 @@ body {
 }
 
 #inicio #presentacion {
+  display: grid;
+  grid-template-columns: max-content max-content ; 
+  place-items: center; /* Centra horizontal y verticalmente */
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+
+  padding: 0 10vw;
+  height: 45vh;
   background-color: rgba(0, 0, 0, 0.797);
-  
-  display: grid; /* Define que se va a usar grid */
-  grid-template-columns: max-content max-content auto ; /* Crea tres columnas de tamaño automático */
-  gap: 0px; /* Espacio entre los elementos */
-  align-items: center; /* Centra los elementos verticalmente */
-  padding: 2% 12%;
 }
 
 #inicio img{
@@ -196,9 +210,8 @@ body {
 }
 
 #inicio #presentacion  button {
-  justify-self: end;
-  width: 200px;
-  height: 50px;
+  width: 11rem;
+  height: 3.4rem;
 
   font-size: 1rem;
   font-weight: 500;

@@ -15,7 +15,7 @@ window.addEventListener("popstate", (event: PopStateEvent): void => {
 
 // Detectar el clic en los enlaces de navegación y cargar la página correspondiente
 document.addEventListener("DOMContentLoaded", (): void => {
-    const links = document.querySelectorAll('nav a');
+    const links = document.querySelectorAll('nav a:not(.ignorar)'); 
     links.forEach(link => {
         link.addEventListener('click', (e: Event) => {
             e.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
