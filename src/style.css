@@ -5,6 +5,10 @@
 }
 
 body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content 1fr max-content;
   font-family: Arial, sans-serif;
 }
 
@@ -21,8 +25,8 @@ body {
 
 .logo {
   display: flex;
-  align-items: center; 
-  gap: 10px; 
+  align-items: center;
+  gap: 10px;
 }
 
 .logo img {
@@ -34,11 +38,11 @@ body {
 .nav-links ul {
   list-style: none;
   display: grid;
-  grid-template-columns: max-content max-content max-content max-content max-content max-content max-content ;
+  grid-template-columns: max-content max-content max-content max-content max-content max-content max-content;
   grid-auto-flow: column;
   gap: 5%;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
 
 .nav-links ul li a {
@@ -52,16 +56,20 @@ body {
 }
 
 .ignorar {
-  display: flex; /* Habilita flexbox */
-  justify-content: center; /* Centra horizontalmente la imagen */
-  align-items: center; /* Centra verticalmente la imagen */
-  padding: 0; /* Elimina cualquier padding adicional */
+  display: flex;
+  /* Habilita flexbox */
+  justify-content: center;
+  /* Centra horizontalmente la imagen */
+  align-items: center;
+  /* Centra verticalmente la imagen */
+  padding: 0;
+  /* Elimina cualquier padding adicional */
 }
 
-.ignorar img{
+.ignorar img {
   max-width: 20%;
   height: auto;
- }
+}
 
 /* Estilos para el icono de menú en pantallas pequeñas */
 .menu-icon {
@@ -73,37 +81,41 @@ body {
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
   .navbar {
-      justify-content: right;
+    justify-content: right;
   }
 
   .nav-links {
-      display: none;
-      width: 100%;
-      background-color: #333;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      text-align: center;
+    display: none;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    text-align: center;
   }
 
   .nav-links ul {
-      display: grid;
-      grid-auto-flow: row;
-      gap: 15px;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 15px;
   }
 
   .menu-icon {
-      display: block;
+    display: block;
   }
 
   .navbar.active .nav-links {
-      display: block;
+    display: block;
   }
+}
+
+#content {
+  height: 100%;
 }
 
 /* FOOTER */
 .footer {
-  background-color: #333;
+  background: linear-gradient(90deg, rgb(13, 5, 106) 0%, rgb(13, 7, 185) 15%, rgb(14, 54, 210) 50%, rgb(7, 10, 185) 85%, rgb(8, 5, 106) 100%);
   color: white;
   text-align: center;
   padding: 20px 0;
@@ -136,6 +148,20 @@ body {
   color: #f0a500;
 }
 
+.footer-logos {
+  display: grid;
+
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 3rem;
+}
+
+.footer-logos img {
+  width: 6rem;
+}
+
 
 
 /********************************* PAGES STYLES *************************************/
@@ -143,8 +169,10 @@ body {
 /***********    INICIO    **********/
 @media (max-width: 768px) {
   #inicio section {
-      min-height: 100vh; /* Asegura que la imagen de fondo cubra toda la pantalla */
-      background-size: contain; /* Evita cortes */
+    min-height: 100vh;
+    /* Asegura que la imagen de fondo cubra toda la pantalla */
+    background-size: contain;
+    /* Evita cortes */
   }
 }
 
@@ -152,29 +180,34 @@ body {
 /* #inicio {
 
 } */
+#inicio {
+  height: 100%;
+}
 
 #inicio section {
   background-image: url('./assets/images/estadisticas-not.jpg');
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  height: 800px; /* Ajusta la altura */
+  height: 100%;
+  /* Ajusta la altura */
 }
 
 #inicio #presentacion {
   display: grid;
-  grid-template-columns: max-content max-content ; 
-  place-items: center; /* Centra horizontal y verticalmente */
+  grid-template-columns: max-content max-content;
+  place-items: center;
+  /* Centra horizontal y verticalmente */
   justify-content: center;
   align-items: center;
   gap: 7rem;
 
-  padding: 0 10vw;
-  height: 45vh;
-  background-color: rgba(0, 0, 0, 0.797);
+  padding: 5% 10%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.866);
 }
 
-#inicio img{
+#inicio img {
   width: 300px;
   margin-right: 20px;
 }
@@ -182,37 +215,110 @@ body {
 #inicio #presentacion h1 {
   font-size: 4rem;
   color: #ffffff;
-  position: relative; /* Necesario para la posición de los elementos dentro */
+  position: relative;
+  /* Necesario para la posición de los elementos dentro */
 }
 
-#presentacion  h1 .gg {
+#presentacion h1 .gg {
   color: #3cab37;
 }
 
-#inicio #presentacion  h1 span {
-  display: inline-block; /* Para que se trate como un bloque y se mueva independientemente */
+#inicio #presentacion h1 span {
+  display: inline-block;
+  /* Para que se trate como un bloque y se mueva independientemente */
 }
 
 #inicio #presentacion .chile {
   color: #d30f32;
   font-size: 1.5rem;
-  position: absolute; /* Permite mover el texto respecto al h1 */
-  left: 60%; /* Ajusta el valor para mover "Chile" sobre la "U" */
-  top: 57px; /* Ajusta la distancia vertical desde la parte superior del h1 */
+  position: absolute;
+  /* Permite mover el texto respecto al h1 */
+  left: 60%;
+  /* Ajusta el valor para mover "Chile" sobre la "U" */
+  top: 57px;
+  /* Ajusta la distancia vertical desde la parte superior del h1 */
 }
 
-#inicio #presentacion  .comp {
+#inicio #presentacion .comp {
   color: #a2a0a0;
   position: absolute;
-  left: 10%; /* Esto pone "Compañia de cobranzas" en una nueva línea debajo del h1 */ /* Espacio entre el h1 y el texto */
+  left: 10%;
+  /* Esto pone "Compañia de cobranzas" en una nueva línea debajo del h1 */
+  /* Espacio entre el h1 y el texto */
   top: 120%;
-  font-size: 1.2rem; /* Ajusta el tamaño del texto */
+  font-size: 1.2rem;
+  /* Ajusta el tamaño del texto */
 }
 
-#inicio #presentacion  button {
+#inicio #presentacion button {
+  border: none;
+  border-radius: 8px;
+  /* Bordes más suaves */
+  background: radial-gradient(circle, #d30f32 0%, #a00c2a 50%, #70081f 100%);
+  color: white;
+  /* Asegurar que el texto sea visible */
   width: 11rem;
   height: 3.4rem;
-
   font-size: 1rem;
+  /* Un poco más grande para mejor lectura */
   font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  /* Suaviza los cambios */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  /* Sombra sutil */
+}
+
+#inicio #presentacion button:hover {
+  background: radial-gradient(circle, #ff355e 0%, #d30f32 50%, #a00c2a 100%);
+  transform: scale(1.05);
+  /* Pequeño efecto de crecimiento */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+#inicio #presentacion button:active {
+  transform: scale(0.98);
+  /* Da efecto de ser presionado */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* QUIENES SOMOS */
+
+#quienes-somos {
+  background-image: url("./assets/images/Santiago_nocturno_2013.jpg");
+  background-size: cover;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+
+  justify-content: center;
+  align-items: center;
+}
+.carousel img{
+  margin: auto auto;
+  width: 90%; /* O cualquier tamaño que desees */
+  height: 30rem; /* Mantén el mismo valor para crear un cuadrado */
+  object-fit: cover; /* Asegura que la imagen cubra todo el área del contenedor */
+  overflow: hidden;
+}
+#quienes-somos .carousel-image{
+  display: none;  
+}
+
+#quienes-somos .carousel-image.active{
+  display: block;
+}
+
+#quienes-somos .ladoB {
+  background-color: #3cab37;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+}
+
+.ladoB .presentacion {
+  width: 80%;
 }
