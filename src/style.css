@@ -110,7 +110,7 @@ body {
 }
 
 #content {
-  height: 100%;
+  height: 94vh;
 }
 
 /* FOOTER */
@@ -204,7 +204,7 @@ body {
 
   padding: 5% 10%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.866);
+  background-color: rgba(0, 0, 0, 0.867);
 }
 
 #inicio img {
@@ -295,10 +295,12 @@ body {
 
   justify-content: center;
   align-items: center;
+
+  padding: 5rem 0;
 }
 .carousel img{
   margin: auto auto;
-  width: 90%; /* O cualquier tamaño que desees */
+  width: 38rem; /* O cualquier tamaño que desees */
   height: 30rem; /* Mantén el mismo valor para crear un cuadrado */
   object-fit: cover; /* Asegura que la imagen cubra todo el área del contenedor */
   overflow: hidden;
@@ -312,7 +314,6 @@ body {
 }
 
 #quienes-somos .ladoB {
-  background-color: #3cab37;
   height: 100%;
 
   display: grid;
@@ -320,5 +321,28 @@ body {
 }
 
 .ladoB .presentacion {
-  width: 80%;
+  display: grid;
+  gap: 1rem;
+  place-items: center;
+
+  width: 90%;
+}
+
+.presentacion h1{
+  color: white;
+  font-size: 3rem;
+
+}
+
+.presentacion p{
+  font-weight: 600;
+  color: white;
+  white-space: pre-line;
+  height: 30rem;
+  padding: 2rem;
+  text-align: center;
+
+  border-radius: 0.8rem;
+  border: 1px solid white;
+  background-color: #010926f0;
 }
