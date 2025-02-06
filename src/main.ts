@@ -1,4 +1,5 @@
 import { loadPage } from './scripts/spa';
+import { carruselActive, stopCarrusel } from './scripts/carrusel'
 
 function navigate(page: string): void {
     // Cambiar la URL sin recargar la página
@@ -42,27 +43,18 @@ document.addEventListener("DOMContentLoaded", (): void => {
 const observer = new MutationObserver((mutationsList, observer) => {
     mutationsList.forEach(mutation => {
         if (mutation.type === 'childList') {
+
             // Revisamos si el elemento que buscamos fue agregado
-            const carruselSection = document.querySelector('.carousel');
+            let carruselSection = document.querySelector('.carousel');
             if (carruselSection) {
                 // Se encontró el carrusel, ahora podemos realizar las acciones necesarias
-                console.log("Carrusel agregado");
-                loadCarruselScript(); // Aquí puedes cargar el script
-                observer.disconnect(); // Dejas de observar una vez que el carrusel fue encontrado
+                carruselActive()// Aquí puedes cargar el script
+            }else{
+                stopCarrusel()
             }
-            console.log("no se cargo")
         }
     });
 });
 
 // Configurar el observer para escuchar en todo el documento
 observer.observe(document.body, { childList: true, subtree: true });
-
-// Función para cargar el script del carrusel
-function loadCarruselScript() {
-    const script = document.createElement('script');
-    script.src = '/src/scripts/carrusel.ts'; // Ruta del script carrusel
-    script.type = 'module'; // Asegurarse de que es un módulo
-    script.async = true; // Cargarlo de forma asíncrona
-    document.head.appendChild(script); // Agregar el script al head
-}

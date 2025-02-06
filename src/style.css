@@ -298,18 +298,23 @@ body {
 
   padding: 5rem 0;
 }
-.carousel img{
+
+.carousel img {
   margin: auto auto;
-  width: 38rem; /* O cualquier tamaño que desees */
-  height: 30rem; /* Mantén el mismo valor para crear un cuadrado */
-  object-fit: cover; /* Asegura que la imagen cubra todo el área del contenedor */
+  width: 38rem;
+  /* O cualquier tamaño que desees */
+  height: 30rem;
+  /* Mantén el mismo valor para crear un cuadrado */
+  object-fit: cover;
+  /* Asegura que la imagen cubra todo el área del contenedor */
   overflow: hidden;
 }
-#quienes-somos .carousel-image{
-  display: none;  
+
+#quienes-somos .carousel-image {
+  display: none;
 }
 
-#quienes-somos .carousel-image.active{
+#quienes-somos .carousel-image.active {
   display: block;
 }
 
@@ -328,13 +333,13 @@ body {
   width: 90%;
 }
 
-.presentacion h1{
+.presentacion h1 {
   color: white;
   font-size: 3rem;
 
 }
 
-.presentacion p{
+.presentacion p {
   font-weight: 600;
   color: white;
   white-space: pre-line;
@@ -346,3 +351,85 @@ body {
   border: 1px solid white;
   background-color: #010926f0;
 }
+
+/* COBRANZAS */
+
+#cobranzas-main {
+  background-color: #70081f;
+  max-width: 100%;
+  min-height: 100%;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+#cobranzas-main .informacion {
+  background-color: #3cab37;
+
+  margin: 0px auto;
+  max-width: 80%;
+
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content max-content;
+}
+
+.informacion .titulo {
+  background-color: #d09a26;
+  padding: 1rem;
+}
+
+.titulo h1 {
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.titulo p {
+  text-align: center;
+  font-size: 1.3rem;
+  white-space: pre;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  margin-bottom: 1rem;
+}
+
+
+.informacion .tarjetas {
+  background-color: blue;
+
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tarjetas .tarjet {
+  display: grid;
+  place-items: center;
+
+  padding: 1rem;
+
+  background-color: rebeccapurple;
+}
+
+.tarjet img {
+  max-width: 5rem;
+
+  margin-bottom: 1rem;
+}
+
+.tarjet h2 {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.tarjet p {
+  text-align: center;
+  font-size: 1rem;
+} 
